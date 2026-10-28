@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="veiwport" content="width=device-width,initial-scale=1.0">
+<title>
+Ire's recipe website
+</title>
+   <style>
+       /* General Page Styles */
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #dff6ff;
+           color: #333;
+           margin: 0;
+           padding: 0;
+           line-height: 1.6;
+       }
+
+       /* Header Styling */
+       header {
+           background-color: #0096c7;
+           color: white;
+           text-align: center;
+           padding: 20px 0;
+       }
+
+       header h1 {
+           margin: 0;
+           font-size: 2.2rem;
+       }
+
+       /* Navigation Grid Styling */
+       nav {
+           background-color: #0077b6;
+           padding: 10px 20px;
+       }
+
+       nav ul.nav-links {
+           list-style: none;
+           padding: 0;
+           margin: 0;
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+           gap: 10px;
+           justify-items: center;
+           align-items: center;
+       }
+
+       nav a {
+           color: white;
+           text-decoration: none;
+           font-weight: bold;
+           padding: 8px 12px;
+           border-radius: 4px;
+           display: block;
+           text-align: center;
+           transition: background 0.3s;
+       }
+
+       nav a:hover {
+           background-color: #48cae4;
+           color: #0077b6;
+       }
+
+       /* Container & Section Box Styling */
+       .container {
+           max-width: 1100px;
+           margin: 20px auto;
+           padding: 0 15px;
+       }
+
+       section {
+           background: white;
+           margin-bottom: 20px;
+           padding: 25px;
+           border-radius: 10px;
+           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+       }
+
+       section h2 {
+           color: #0077b6;
+           border-bottom: 2px solid #0096c7;
+           padding-bottom: 8px;
+           margin-top: 0;
+       }
+
+       /* Recipe Grid Layout Correction */
+       .recipe-grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+           gap: 25px;
+           margin-top: 20px;
+       }
+
+       .recipe-card {
+           background: #fafafa;
+           border: 1px solid #e0e0e0;
+           border-radius: 8px;
+           padding: 15px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+       }
+
+       .recipe-card img {
+           width: 100%;
+           height: 180px;
+           object-fit: cover;
+           border-radius: 8px;
+           margin-bottom: 12px;
+       }
+
+       .recipe-card h3 {
+           color: #0096c7;
+           margin-top: 0;
+       }
+
+       /* Table Styling */
+       table {
+           width: 100%;
+           border-collapse: collapse;
+           margin-top: 15px;
+       }
+
+       th, td {
+           border: 1px solid #ccc;
+           padding: 12px;
+           text-align: left;
+       }
+
+       th {
+           background-color: #90e0ef;
+           color: #0077b6;
+       }
+
+       tr:nth-child(even) {
+           background-color: #f9f9f9;
+       }
+
+       /* Form Styling (Grid Layout for Input Form) */
+       .form-grid {
+           display: grid;
+           grid-template-columns: 1fr;
+           gap: 15px;
+           margin-top: 15px;
+       }
+
+       @media (min-width: 600px) {
+           .form-grid-2col {
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               gap: 15px;
+           }
+       }
+
+       label {
+           font-weight: bold;
+           display: block;
+           margin-bottom: 5px;
+       }
+
+       input[type="text"],
+       input[type="email"],
+       select,
+       textarea {
+           width: 100%;
+           padding: 10px;
+           border: 1px solid #ccc;
+           border-radius: 5px;
+           box-sizing: border-box;
+           font-size: 14px;
+       }
+
+       .radio-group, .checkbox-group {
+           margin: 10px 0;
+       }
+
+       input[type="submit"] {
+           background-color: #0096c7;
+           color: white;
+           border: none;
+           padding: 12px 20px;
+           border-radius: 5px;
+           font-size: 16px;
+           cursor: pointer;
+           transition: background 0.3s;
+       }
+
+       input[type="submit"]:hover {
+           background-color: #0077b6;
+       }
+
+       /* Footer Styling */
+       footer {
+           text-align: center;
+           background-color: #0077b6;
+           color: white;
+           padding: 15px 0;
+           margin-top: 30px;
+       }
+</style>
+</head>
+<body>
+<header>
+<h1>Ire's recipe book </h1>
+<p>Easy and Delicious Recipes for Everyone </p>
+</header>
+<nav>
+  <ul class="nav-links">
+
+    <li><a href="#home">Home<a></li>
+    <li><a href="#recipes">Recipes<a></li>
+    <li><a href="#table">Recipe table<a></li>
+    <li><a href="#contact">Contact<a></li>            
+</nav>
+<div class="container">
+<!--Home Section-->
+<section id="home">
+<h2>Welcome!</h2>
+<p>Hello, and welcome to a place where you can get amazing recipes for free!
+We have recipes like noodles, rice and even pizza!</p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOX8DiFYzqaP0wluK6qEWUTEYeyak5Zd41uNJFeG1GOg&s=10" alt="Food">
+</section>
+
+
+
+
+
+<!--Recipes-->
+<section id="recipes">
+<h2>Featured recipe</h2>
+<div class="recipe-grid">
+<div class="recipe-card">
+<div>
+<h3>Rice</h3>
+<img src="https://cdn.loveandlemons.com/wp-content/uploads/2020/03/how-to-cook-rice.jpg" alt="Food">
+<h4>Ingredients</h4>
+<ul>
+        <li>1 cup of long-grain white rice</li>
+        <li>2 cups of water</li>
+        <li>1 teaspoon of salt</li>
+        <li>1 tablespoon of butter or oil (optional)</li>
+    </ul>
+<h4>Steps</h4>
+<ol>
+  <li>Rinse the rice thoroughly under cold water.</li>
+  <li>Add two cups of water for every cup of rice.</li>
+  <li>Bring the water to a boil in a pot.</li>
+  <li>Stir in the rice and add a pinch of salt.</li>
+  <li>Cover with a lid and reduce heat to low.</li>
+  <li>Simmer for 15 minutes without lifting the lid.</li>
+  <li>Remove from heat and let sit for 5 minutes.</li>
+  <li>Fluff with a fork and serve hot.</li>
+</ol>
+</div>
+</div>
+<div class="recipe-card">
+<div>
+
+
+
+<h3>Pizza</h3>
+<img src="https://up.yimg.com/ib/th/id/OIP.z_ilCv9sIs4AnOpF_9GB5AHaEo?pid=Api&rs=1&c=1&qlt=95&w=196&h=122" alt="Food">
+<h4>Ingredients</h4>
+ <ul>
+        <li>1 pre-made pizza dough ball</li>
+        <li>1/2 cup pizza sauce</li>
+        <li>1 cup shredded mozzarella cheese</li>
+        <li>Fresh basil leaves</li>
+        <li>1 tablespoon olive oil</li>
+    </ul><h4>Steps</h4>
+    <ol>
+        <li>Preheat your oven to 450°F (230°C).</li>
+        <li>Roll out the pizza dough onto a floured surface.</li>
+        <li>Spread the pizza sauce evenly over the crust.</li>
+        <li>Sprinkle the mozzarella cheese over the sauce.</li>
+        <li>Bake for 12 to 15 minutes until the crust is golden brown.</li>
+        <li>Top with fresh basil and a drizzle of olive oil before slicing.</li>
+    </ol>
+</div>
+</div>
+<div class="recipe-card">
+<div>
+<h3>Eba</h3>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-9mLcXJ-FcLR5vePIn1AV3FkNHO04AJKcBS69bfrFDg&s=10" alt="Food">
+<h4>Ingredients</h4>
+<ul>
+  <li>Garri (cassava flakes)</li>
+  <li>Hot boiling water</li>
+</ul><h3>Steps</h3>
+    <ol>
+        <li>Boil the water in a pot or kettle.</li>
+        <li>Pour the hot water into a clean bowl.</li>
+        <li>Sprinkle the garri smoothly into the water.</li>
+        <li>Let it sit for 1 minute to absorb water.</li>
+        <li>Stir firmly with a wooden spatula until smooth.</li>
+    </ol><hr>
+
+<h2>Pando</h2>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtivfnn-QXEMndRT8tClO1tWAcAbhTMOiIFexuMTEp1w&s=10" alt="Food">
+ <h2>Ingredients</h2>
+    <ul>
+        <li>1 cup of Poundo Yam flour</li>
+        <li>2 cups of water (adjust for desired thickness)</li>
+    </ul>
+
+    <h2>Steps</h2>
+    <ol>
+        <li><strong>Boil water:</strong> Pour the water into a small pot and bring it to a rolling boil.</li>
+        <li><strong>Reduce heat:</strong> Turn the stove heat down to low to prevent instant burning.</li>
+        <li><strong>Add flour:</strong> Pour the poundo flour into the boiling water while stirring continuously.</li>
+        <li><strong>Mix well:</strong> Use a wooden spatula to stir vigorously until a thick, smooth dough forms.</li>
+        <li><strong>Steam:</strong> Add a tablespoon of hot water around the edges, cover the pot, and let it steam on low heat for 2 minutes.</li>
+        <li><strong>Final mix:</strong> Stir thoroughly one last time until the dough becomes stretchy and smooth.</li>
+        <li><strong>Serve:</strong> Scoop into plastic wrap or a bowl, mold it into a ball, and serve hot with soup.</li>
+    </ol>
+</div>
+</div>
+<div class="recipe-card">
+<div>
+<h3>apple pie</h3>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlAsXJjVFnY6p2O94uFbu3_dHwjyQc_gTEb4LPNDksYg&s=10" alt="Food">
+<h2>Classic Apple Pie Recipe</h2>
+<div class="recipe-card">
+<div>
+<h3>Ingredients</h3>
+<ul>
+  <li><strong>Pie crusts</strong>: 2 refrigerated or homemade pastry crusts.</li>
+  <li><strong>Apples</strong>: 6 cups of thinly sliced, peeled baking apples (like Granny Smith).</li>
+  <li><strong>Granulated sugar</strong>: 3/4 cup to sweeten the fruit filling.</li>
+  <li><strong>All-purpose flour</strong>: 2 tablespoons to thicken the pie juices.</li>
+  <li><strong>Ground cinnamon</strong>: 1 teaspoon for warm spice flavor.</li>
+  <li><strong>Salt</strong>: 1/4 teaspoon to balance the sweetness.</li>
+  <li><strong>Lemon juice</strong>: 1 tablespoon to keep the apples bright and fresh.</li>
+  <li><strong>Unsalted butter</strong>: 1 tablespoon, cut into small pieces to dot the filling.</li>
+</ul>
+
+<h3>Steps</h3>
+<ol>
+  <li><strong>Preheat and prep</strong>: Heat your oven to 425&deg;F (220&deg;C) and fit one pastry crust into a 9-inch pie plate.</li>
+  <li><strong>Mix the filling</strong>: Toss the sliced apples, sugar, flour, cinnamon, salt, and lemon juice together in a large bowl.</li>
+  <li><strong>Fill the crust</strong>: Pour the apple mixture into the pie plate and dot the top with the small butter pieces.</li>
+  <li><strong>Top the pie</strong>: Place the second crust over the filling, trim the edges, and crimp them together to seal.</li>
+  <li><strong>Vent the top</strong>: Cut a few small slits in the top crust with a knife to let steam escape during baking.</li>
+  <li><strong>Bake</strong>: Bake for 40 to 45 minutes until the crust is golden brown and the filling bubbles through the slits.</li>
+  <li><strong>Cool</strong>: Let the pie cool completely on a wire rack for at least 2 hours before slicing so the filling sets.</li>
+</ol><hr>
+
+<h2>Classic Vanilla Cake Recipe</h2>
+
+<h4>Ingredients</h4>
+<ul>
+  <li><strong>All-purpose flour</strong>: 2 and 1/2 cups for the cake structure.</li>
+  <li><strong>Baking powder</strong>: 2 and 1/2 teaspoons to help the layers rise.</li>
+  <li><strong>Salt</strong>: 1/2 teaspoon to balance the sweetness.</li>
+  <li><strong>Unsalted butter</strong>: 1 cup, softened at room temperature.</li>
+  <li><strong>Granulated sugar</strong>: 1 and 1/2 cups for sweetness and moisture.</li>
+  <li><strong>Eggs</strong>: 4 large eggs to provide structure and richness.</li>
+  <li><strong>Vanilla extract</strong>: 1 tablespoon for the primary flavor.</li>
+  <li><strong>Whole milk</strong>: 1 cup to create a smooth, tender batter.</li>
+</ul>
+
+<h4>Steps</h4>
+<ul>
+  <li><strong>Preheat and prep</strong>: Heat your oven to 350&deg;F (175&deg;C), grease two 9-inch round cake pans, and line the bottoms with parchment paper.</li>
+  <li><strong>Combine dry ingredients</strong>: Whisk the flour, baking powder, and salt together in a medium bowl, then set aside.</li>
+  <li><strong>Cream butter and sugar</strong>: Beat the softened butter and granulated sugar together in a large bowl until light and fluffy.</li>
+  <li><strong>Add eggs and vanilla</strong>: Add the eggs one at a time, beating well after each addition, then stir in the vanilla extract.</li>
+  <li><strong>Alternate wet and dry</strong>: Gradually add the dry ingredients and milk to the butter mixture, alternating between them and mixing just until combined.</li>
+  <li><strong>Bake the layers</strong>: Divide the batter evenly between your prepared pans and bake for 25 to 30 minutes until a toothpick inserted in the center comes out clean.</li>
+  <li><strong>Cool completely</strong>: Let the cakes cool in their pans for 10 minutes, then turn them out onto a wire rack to cool fully before frosting.</li>
+</ul>
+</div>
+</div>
+</section>
+<!--Table-->
+<section id="table">
+<h2>Recipe Information</h2>
+<table>
+<tr>
+<th>Recipe</th>
+<th>Preporation time</th>
+<th>Cooking time</th>
+<th>Diffuculty</th>
+</tr>
+<tr>
+<td>Rice</td>
+<td>2 mins</td>
+<td>15 mins</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>Eba</td>
+<td>1 mins</td>
+<td>4 mins</td>
+<td>Very easy</td>
+</tr>
+<tr>
+<td>Pizza</td>
+<td>80 mins</td>
+<td>15 mins</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Classic Muffins</td>
+<td>15 minutes</td>
+<td>20 minutes</td>
+<td>Easy</td>
+</tr>
+<tr>
+  <td>Classic Vanilla Cake</td>
+  <td>20 minutes</td>
+  <td>30 minutes</td>
+  <td>Medium</td>
+</tr>
+<tr>
+  <td><strong>Classic Apple Pie</strong></td>
+  <td>30 minutes</td>
+  <td>45 minutes</td>
+  <td>Medium</td>
+</tr>
+</table>
+</section>
+
+
+
+
+<!--Contact-->
+<section id="contact">
+<h2>Share your favorite recipe with us</h2>
+<form>
+<label>Full name</label>
+<input type="text" placeholder="Enter your Name"
+
+<label>Email address</label>
+<input type="email" placeholder="Enter your email"
+
+<label>Favorite food</label>
+<select>
+<option>Eba</option>
+<option>Rice</option>
+<option>Poundo</option>
+<option>Pizza</option>
+<option>cookies</option>
+<option>muffins</option>
+</select>
+<label>Recipe diffuculty</label><br>
+<input type="radio" Name="level">Easy<br>
+<input type="radio" Name="level">Medium<br>
+<input type="radio" Name="level">Hard<br>
+
+<input type="checkbox">
+I have tried this recipe before
+<br><br>
+<label>Your Recipe</label>
+<textarea rows=6 placeholder="Write your recipe here..."></textarea>
+<input type="submit" value="send recipe"
+</form>
+</section>
+
+
+
+<!--Footer-->
+<footer>
+<h3>Ire's recipe book</h3>
+<p>Made with html</p>
+<p>&copy;2026 Ire's recipe book.All rights reserved.</p>
+</footer>
+</body>
+</html>
